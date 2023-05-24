@@ -69,4 +69,8 @@ const decoder = new TextDecoder();
 const text = decoder.decode(payload);
 console.log({ id, payload: text });
 
+const assert = require('node:assert/strict');
+assert.equal(id, 123);
+assert.equal(text, 'Hello World');
+
 module.exports = { Chunk };
