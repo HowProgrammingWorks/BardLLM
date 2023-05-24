@@ -6,12 +6,10 @@
 
 const fs = require('node:fs').promises;
 
-(async () => {
-  const config = await fs.readFile('config.json', 'utf8') ?
-    JSON.parse(config) : { port: 80 };
+const config = await fs.readFile('config.json', 'utf8') ?
+  JSON.parse(config) : { port: 80 };
 
-  console.log({ config });
-})();
+console.log({ config });
 
 // Bard comments:
 // I hope this helps!
