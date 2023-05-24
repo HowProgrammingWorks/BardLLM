@@ -43,4 +43,9 @@ const UINT32_MAX = 0xffffffff;
 const cryptoRandom = () =>
   randPrefetcher.next().readUInt32LE(0, true) / (UINT32_MAX + 1);
 
+// Usage example
+
+const n = cryptoRandom();
+console.log({ n });
+
 module.exports = { cryptoRandom };
